@@ -163,86 +163,154 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 0px 30px;
-}
 
-.search_div {
-    position: relative;
-    .search_icon {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-    }
-
-    #music_search {
-        background-color: #EBEBEB;
-        border: none;
-        padding: 15px 30px 15px 50px;
-        width: 350px;
-        border-radius: 50px;
-        outline: none;
-
-        @include media-breakpoint-down(md) {
-            width: 250px;
-            padding: 15px 20px 12px 45px;
+    .search_div {
+        position: relative;
+        .search_icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
         }
-    }
-}
-
-.user_div {
     
-    $user_image_width: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .user_image_container {
-        width: $user_image_width + 5px;
-        height: $user_image_width + 5px;
-        border-radius: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #C1C1C1;
-
-        
-        @include media-breakpoint-down(md) {
-            width: $user_image_width - 10px;
-            height: $user_image_width - 10px;
-        }
-
-        img {
-            border-radius: 100px;
-            width: $user_image_width;
-            height: $user_image_width;
-           
-
+        #music_search {
+            background-color: #EBEBEB;
+            border: none;
+            padding: 15px 30px 15px 50px;
+            width: 350px;
+            border-radius: 50px;
+            outline: none;
+    
             @include media-breakpoint-down(md) {
-                width: $user_image_width - 15px;
-                height: $user_image_width - 15px;
+                width: 250px;
+                padding: 15px 20px 12px 45px;
             }
         }
     }
-
-    .user_name_container {
-        font-size: 14px;
-        font-weight: 600;
-        font-family: "open sans";
-        margin-left: 10px;
+    
+    .user_div {
+        
+        $user_image_width: 54px;
         display: flex;
         align-items: center;
         justify-content: center;
+    
+        .user_image_container {
+            width: $user_image_width + 5px;
+            height: $user_image_width + 5px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #C1C1C1;
+    
+            
+            @include media-breakpoint-down(md) {
+                width: $user_image_width - 10px;
+                height: $user_image_width - 10px;
+            }
+    
+            img {
+                border-radius: 100px;
+                width: $user_image_width;
+                height: $user_image_width;
+               
+    
+                @include media-breakpoint-down(md) {
+                    width: $user_image_width - 15px;
+                    height: $user_image_width - 15px;
+                }
+            }
+        }
+    
+        .user_name_container {
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "open sans";
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
     }
-
 }
 /*** RHS TOP  ***/
 
 /*** RHS BOTTOM ***/
 .rhs_bottom {
     background-color: #FBFBFB;
-    height: 120px;
+    height: $rhs_bottom_height;
     position: absolute;
     bottom: 0px;
     width: 100%;
+    display: flex;
+
+    .rhs_bottom_album_art_div {
+        min-width: $album_art_bottom_width;
+        height: 100%;
+        background-color: #333;
+        max-width: $album_art_bottom_width;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            width: 190px;
+        }
+    }
+    
+    .rhs_bottom_rhs {
+        width: 100%;
+    
+        .progress_bar {
+            height: 5px;
+            background-color: #EBEBEB;
+            //background-color: #EE5044;
+            width: 100%;
+        
+            .live_progress {
+                width: 300px;
+                height: 5px;
+                background-color: #EE5044;
+            }
+        }
+
+        .player_controls {
+            height: calc(120px - 5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .play_button {
+                background-color: #EE5044;
+                width: 60px;
+                height: 60px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                i {
+                    font-size: 35px;
+                    color: #fff;
+                }
+            }
+
+            &>div {
+                color: #EE5044;
+                font-size: 35px;
+                margin: 0px 20px;
+                cursor: pointer;
+
+                &.loop_button {
+                    margin-right: 50px;
+                }
+
+                &.volume_button {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
 }
 /*** RHS BOTTOM ***/
 

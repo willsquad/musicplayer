@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
     </head>
 <body>
     <!-- START OF MAIN CONTAINER FLUID -->
@@ -25,7 +26,7 @@
                 <div class="logo_div">
                     <h2 id="logo">Music<span>Player</span></h2>
                     <div class="menu_icon">
-                        <i class="material-icons">menu</i>
+                        <i class="fa fa-bars"></i>
                     </div>
                 </div>
             </div>
@@ -33,7 +34,7 @@
     
             <!-- START OF RHS  -->
             <div class="col-12 col-sm-8 offset-sm-4 col-lg-9 offset-lg-3 col-xl-10 offset-xl-2 player_rhs">
-                
+
                 <!-- RHS TOP -->
                 <div class="rhs_top">
                     <div class="search_div">
@@ -54,7 +55,41 @@
 
                 <!-- RHS BOTTOM -->
                 <div class="rhs_bottom">
+                    <!-- RHS BOTTOM LHS -->
+                    <div class="rhs_bottom_album_art_div">
+                        <img src="files/images/album_art.jpg" alt="">
+                    </div>
+                    <!-- RHS BOTTOM LHS -->
 
+                    <!-- RHS BOTTOM RHS -->
+                    <div class="rhs_bottom_rhs">
+                        <!-- Music Progress bar  -->
+                        <div class="progress_bar">
+                            <div class="live_progress"></div>
+                        </div>
+                        <!-- Music Progress bar  -->
+
+                        <!-- Music Player Controls -->
+                        <div class="player_controls">
+                            <div class="loop_button">
+                                <i class="material-icons">replay</i>
+                            </div>
+                            <div class="previous_button">
+                                <i class="fa fa-backward"></i>
+                            </div>
+                            <div class="play_button">
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div class="next_button">
+                                <i class="fa fa-forward"></i>
+                            </div>
+                            <div class="volume_button">
+                                <i class="material-icons">volume_up</i>
+                            </div>
+                        </div>
+                        <!-- Music Player Controls -->
+                    </div>
+                    <!-- RHS BOTTOM RHS -->
                 </div>
                 <!-- RHS BOTTOM -->
             </div>
@@ -66,6 +101,6 @@
     <!-- END OF MAIN CONTAINER FLUID -->
 </body>
 
-<script defer src="//use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="files/js/main.js"></script>
