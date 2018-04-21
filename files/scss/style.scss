@@ -120,7 +120,7 @@ button {
 }
 
 .logo_div {
-    height: 105px;
+    height: $top_div_height;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,17 +130,20 @@ button {
     #logo {
         color: #EE5044;
         font-weight: 700;
-        font-size: 30px;
+        font-size: 28px;
         font-family: montserrat;
         margin-bottom: 0px;
         span {
             color: #000000;
         }
     }
+
     .menu_icon {
-        font-size: 26px;
-        line-height: 0px;
         cursor: pointer;
+        line-height: 0px;
+        i{
+            font-size: 34px;
+        }
     }
 }
 /**** Music Player LHS  ****/
@@ -149,5 +152,51 @@ button {
 .player_rhs {
     background-color: #fff;
     height: 100vh;
+    padding: 0px;
+}
+
+.rhs_top {
+    height: $top_div_height;
+    border-bottom: 1px solid #BFBFBF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+.search_div {
+    position: relative;
+    .search_icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    #music_search {
+        background-color: #EBEBEB;
+        border: none;
+        padding: 15px 30px 15px 50px;
+        width: 350px;
+        border-radius: 50px;
+        outline: none;
+    }
+}
+
+.user_div {
+    
+    .user_image_container {
+        width: 65px;
+        height: 65px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #C1C1C1;
+        img {
+            border-radius: 100px;
+            width: 60px;
+            height: 60px;
+        }
+    }
 }
 /**** Music Player RHS  ****/
