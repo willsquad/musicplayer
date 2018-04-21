@@ -155,6 +155,7 @@ button {
     padding: 0px;
 }
 
+/*** RHS TOP  ***/
 .rhs_top {
     height: $top_div_height;
     border-bottom: 1px solid #BFBFBF;
@@ -179,12 +180,17 @@ button {
         width: 350px;
         border-radius: 50px;
         outline: none;
+
+        @include media-breakpoint-down(md) {
+            width: 250px;
+            padding: 15px 20px 12px 45px;
+        }
     }
 }
 
 .user_div {
     
-    $user_image_width: 56px;
+    $user_image_width: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,10 +203,23 @@ button {
         align-items: center;
         justify-content: center;
         background-color: #C1C1C1;
+
+        
+        @include media-breakpoint-down(md) {
+            width: $user_image_width - 10px;
+            height: $user_image_width - 10px;
+        }
+
         img {
             border-radius: 100px;
             width: $user_image_width;
             height: $user_image_width;
+           
+
+            @include media-breakpoint-down(md) {
+                width: $user_image_width - 15px;
+                height: $user_image_width - 15px;
+            }
         }
     }
 
@@ -215,4 +234,17 @@ button {
     }
 
 }
+/*** RHS TOP  ***/
+
+/*** RHS BOTTOM ***/
+.rhs_bottom {
+    background-color: #FBFBFB;
+    height: 120px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+/*** RHS BOTTOM ***/
+
+
 /**** Music Player RHS  ****/
