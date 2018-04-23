@@ -130,19 +130,22 @@ button {
     #logo {
         color: #EE5044;
         font-weight: 700;
-        font-size: 28px;
+        font-size: 26px;
         font-family: montserrat;
         margin-bottom: 0px;
         span {
             color: #000000;
         }
+
+
     }
 
     .menu_icon {
         cursor: pointer;
         line-height: 0px;
         i{
-            font-size: 34px;
+            font-size: 30px;
+
         }
     }
 }
@@ -233,10 +236,10 @@ button {
             outline: none;
             box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
     
-            @include media-breakpoint-down(md) {
+            /* @include media-breakpoint-down(md) {
                 width: 250px;
                 padding: 15px 20px 12px 45px;
-            }
+            } */
         }
     }
     
@@ -257,10 +260,10 @@ button {
             background-color: #C1C1C1;
     
             
-            @include media-breakpoint-down(md) {
+            /* @include media-breakpoint-down(md) {
                 width: $user_image_width - 10px;
                 height: $user_image_width - 10px;
-            }
+            } */
     
             img {
                 border-radius: 100px;
@@ -268,10 +271,10 @@ button {
                 height: $user_image_width;
                
     
-                @include media-breakpoint-down(md) {
+                /* @include media-breakpoint-down(md) {
                     width: $user_image_width - 15px;
                     height: $user_image_width - 15px;
-                }
+                } */
             }
         }
     
@@ -289,12 +292,106 @@ button {
 }
 /*** RHS TOP  ***/
 
+/*** RHS MOBILE TOP HEADER ***/
+.mobile_top_header {
+    position: absolute;
+    width: 100%;
+    height: $mobile_top_header;
+    background: #EEEEEE;
+    display: flex;
+    justify-content: center;
+
+
+    .mobile_top_header_content {
+        position: absolute;
+        width: 88%;
+        margin: 0 auto;
+        height: 75px;
+    }
+}
+/*** RHS MOBILE TOP HEADER ***/
+
+/*** RHS MOBILE ALBUM ART ***/
+.mobile_album_art_song_details {
+    position: absolute;
+    width: 100%;
+    height: $mobile_album_art_height;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .album_art {
+        height: $mobile_album_art_height;
+        position: absolute;
+        width: 88%;
+        background: #333;
+        margin: 0 auto;
+        box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.45);
+
+        img {
+            max-height: 100%;
+            object-fit: cover;
+            min-width: 100%;
+            object-position: top;
+        }
+    }
+
+    .album_art_overlay {
+        height: $mobile_album_art_height;
+        position: absolute;
+        width: 88%;
+        background: rgba(0,0,0,0.7);
+        margin: 0 auto;
+
+        display: flex;
+        //align-items: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10px;
+        color: #ddd;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+
+        #song_name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        #artist_name {
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        #song_time {
+            font-size: 12px;
+        }
+
+        & > div {
+            text-align: center;
+        }
+    }
+}
+/*** RHS MOBILE ALBUM ART ***/
+
+
 /*** RHS MIDDLE  ***/
 .rhs_mid_content {
     padding: 20px 30px;
-    height: calc(100vh - 225px);
-    max-height: calc(100vh - 225px);
+    height: calc(100vh - #{$top_div_height + $rhs_bottom_height});
+    max-height: calc(100vh - #{$top_div_height + $rhs_bottom_height});
     overflow-y: auto;
+
+    @include media-breakpoint-down(md) {
+        height: calc(100vh - #{$rhs_bottom_height_md + $mobile_top_header + $distance_from_mobile_top_header});
+        max-height: calc(100vh - #{$rhs_bottom_height_md + $mobile_top_header + $distance_from_mobile_top_header});
+        padding: 0px 0px 20px 0px;
+
+        position: relative;
+        top: $mobile_top_header + $distance_from_mobile_top_header;
+        padding-top: 0px;
+    }
 
     .rhs_mid_content_top {
         display: flex;
@@ -315,6 +412,10 @@ button {
 
     .playlist_tracks_container {
         margin-top: 30px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 0px;
+        }
 
         .track_div {
 
@@ -350,7 +451,7 @@ button {
                     }
 
                     .play_icon{
-                        width: 60px;
+                        width: 100%;
                         height: 60px;
                         border-radius: 60px;
                         position: absolute;
@@ -401,6 +502,10 @@ button {
     width: 100%;
     display: flex;
 
+    @include media-breakpoint-down(md) {
+        height: $rhs_bottom_height_md;
+    }
+
     .rhs_bottom_album_art_div {
         min-width: $album_art_bottom_width;
         height: 100%;
@@ -434,10 +539,14 @@ button {
 
         /* Start of player controls */
         .player_controls {
-            height: calc(120px - 5px);
+            height: calc(#{$rhs_bottom_height} - 5px);
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include media-breakpoint-down(md) {
+                height: calc(#{$rhs_bottom_height_md} - 5px);
+            }
 
             .play_button {
                 background-color: #EE5044;
@@ -468,7 +577,7 @@ button {
                     margin-right: 50px;
 
                     @include media-breakpoint-down(md) {
-                        margin-right: 25px;
+                        margin-right: 20px;
                     }
                 }
 
@@ -476,7 +585,7 @@ button {
                     margin-left: 50px;
 
                     @include media-breakpoint-down(md) {
-                        margin-right: 25px;
+                        margin-left: 20px;
                     }
                 }
             }

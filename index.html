@@ -23,12 +23,12 @@
         <div class="row">
 
             <!-- START OF LHS  -->
-            <div class="col-12 col-sm-4 col-lg-3 col-xl-2 player_lhs">
+            <div class="col-12 col-sm-12 col-lg-3 col-xl-2 player_lhs hidden-md-down">
                 <div class="logo_div">
                     <h2 id="logo">Music<span>Player</span></h2>
-                    <div class="menu_icon">
+                    <!-- <div class="menu_icon">
                         <i class="fa fa-bars"></i>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="menu_div">
@@ -71,10 +71,10 @@
             <!-- END OF LHS  -->
     
             <!-- START OF RHS  -->
-            <div class="col-12 col-sm-8 offset-sm-4 col-lg-9 offset-lg-3 col-xl-10 offset-xl-2 player_rhs">
+            <div class="col-12 col-sm-12 col-lg-9 offset-lg-3 col-xl-10 offset-xl-2 player_rhs">
 
                 <!-- RHS TOP -->
-                <div class="rhs_top">
+                <div class="rhs_top hidden-md-down">
                     <div class="search_div">
                         <i class="material-icons search_icon">search</i>
                         <input type="search" id="music_search" placeholder="Search">
@@ -91,10 +91,31 @@
                 </div>
                 <!-- RHS TOP -->
 
+                <div class="mobile_top_header hidden-lg-up">
+                    <div class="mobile_top_header_content">
+
+                    </div>
+                </div>
+
+                <div class="mobile_album_art_song_details hidden-lg-up">
+                    <div class="album_art">
+                        <img src="files/images/album_art.jpg" alt="">
+                    </div>
+
+                    <div class="album_art_overlay">
+                        <div class="song_artist_div">
+                            <h3 id="song_name">Song Name</h3>
+                            <h4 id="artist_name">Artist Name</h4>
+                        </div>
+                        <div class="song_time_div">
+                            <h4 id="song_time">1:03 / 4:56</h4>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- RHS CONTENT SECTION -->
                 <div class="rhs_mid_content">
-                    <div class="rhs_mid_content_top">
+                    <div class="rhs_mid_content_top hidden-md-down">
                         <h3 id="rhs_middle_title">Playlist</h3>
                         <div class="filter">
                             <select name="" id="">
@@ -235,7 +256,7 @@
                 <!-- RHS BOTTOM -->
                 <div class="rhs_bottom">
                     <!-- RHS BOTTOM LHS -->
-                    <div class="rhs_bottom_album_art_div">
+                    <div class="rhs_bottom_album_art_div hidden-md-down">
                         <img src="files/images/album_art.jpg" alt="">
                     </div>
                     <!-- RHS BOTTOM LHS -->
