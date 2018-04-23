@@ -293,17 +293,101 @@ button {
 .rhs_mid_content {
     padding: 20px 30px;
     height: calc(100vh - 225px);
+    max-height: calc(100vh - 225px);
+    overflow-y: auto;
 
     .rhs_mid_content_top {
         display: flex;
         align-items: center;
         justify-content: space-between;    
+
+        #rhs_middle_title {
+            font-weight: 700;
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+
+        .nice-select {
+            /* min-width: 135px;
+            max-width: 135px; */
+        }
     }
-    
-    #rhs_middle_title {
-        font-weight: 700;
-        font-size: 20px;
-        padding: 10px 0px;
+
+    .playlist_tracks_container {
+        margin-top: 30px;
+
+        .track_div {
+
+            &:nth-child(odd) {
+                background-color: #F7F7F7;
+            }
+
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding:15px 20px;
+            border: none;
+
+            .lhs {
+
+                display: flex;
+                align-items: center;
+
+                .album_art_round {
+                    width: 60px;
+                    background: #666;
+                    height: 60px;
+                    border-radius: 75px;
+                    position: relative;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 60px;
+                        object-fit: cover;
+                    }
+
+                    .play_icon{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 60px;
+                        position: absolute;
+                        top:0px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(0,0,0,0.25);
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background: rgba(0,0,0,0.5);
+                        }
+
+                        i {
+                            font-size: 32px;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .song_artist_name {
+                    margin-left: 15px;
+                    .song_name {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    .artist_name {
+                        font-size: 11px;
+                        font-weight: 600;
+                        color: #EE5044;
+                    }
+                }
+            }
+        }
+        
     }
 }
 /*** RHS MIDDLE  ***/
