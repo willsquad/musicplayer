@@ -161,11 +161,12 @@ button {
             font-weight: 700;
             text-decoration: none;
             color: #333;
-            font-size: 16px;
+            font-size: 15px;
             margin-left: 10px;
         }
     }
 }
+
 /**** Music Player LHS  ****/
 
 /**** Music Player RHS  ****/
@@ -281,6 +282,7 @@ button {
     .rhs_bottom_rhs {
         width: 100%;
     
+        /* Start of progress bar */
         .progress_bar {
             height: 5px;
             background-color: #EBEBEB;
@@ -293,7 +295,9 @@ button {
                 background-color: #EE5044;
             }
         }
+        /* Start of progress bar */
 
+        /* Start of player controls */
         .player_controls {
             height: calc(120px - 5px);
             display: flex;
@@ -321,15 +325,60 @@ button {
                 margin: 0px 20px;
                 cursor: pointer;
 
+                @include media-breakpoint-down(md) {
+                    font-size: 30px;
+                }
+
                 &.loop_button {
                     margin-right: 50px;
+
+                    @include media-breakpoint-down(md) {
+                        margin-right: 25px;
+                    }
                 }
 
                 &.volume_button {
                     margin-left: 50px;
+
+                    @include media-breakpoint-down(md) {
+                        margin-right: 25px;
+                    }
                 }
             }
         }
+        /* End of player controls */
+        
+        /* Start of Song Name Div  */
+        .song_artist_time_container {
+            height: 115px;
+            position: absolute;
+            top: 5px;
+            display: flex;
+            //align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            padding-top: 10px;
+
+            #song_name {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            #artist_name {
+                font-size: 12px;
+                margin-bottom: 0px;
+            }
+
+            #song_time {
+                font-size: 13px;
+            }
+
+            & > div {
+                margin-left: 10px;
+            }
+        }
+        /* Start of Song Name Div  */
     }
 }
 /*** RHS BOTTOM ***/
