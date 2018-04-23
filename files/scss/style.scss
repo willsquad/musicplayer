@@ -289,6 +289,25 @@ button {
 }
 /*** RHS TOP  ***/
 
+/*** RHS MIDDLE  ***/
+.rhs_mid_content {
+    padding: 20px 30px;
+    height: calc(100vh - 225px);
+
+    .rhs_mid_content_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+    
+    #rhs_middle_title {
+        font-weight: 700;
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+}
+/*** RHS MIDDLE  ***/
+
 /*** RHS BOTTOM ***/
 .rhs_bottom {
     background-color: #FBFBFB;
