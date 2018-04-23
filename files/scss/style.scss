@@ -167,6 +167,37 @@ button {
     }
 }
 
+.playlist_div {
+    padding: 15px 0px;
+    .playlist_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #666;
+            margin-bottom: 0px;
+        }
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    .playlist_element {
+        padding: 10px 15px;
+        padding-left: 40px;
+
+        a {
+            font-weight: 400;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+    }
+}
 /**** Music Player LHS  ****/
 
 /**** Music Player RHS  ****/
