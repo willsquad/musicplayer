@@ -126,6 +126,7 @@ button {
     justify-content: space-between;
     padding: 0px 20px;
     border-bottom: 1px solid #B9B9B9;
+    padding-left: 40px;
 
     #logo {
         color: #EE5044;
@@ -307,6 +308,36 @@ button {
         width: 88%;
         margin: 0 auto;
         height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left_icon_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                font-size: 30px;
+                color: #EE5044;
+                font-weight: bold;
+            }
+
+            .playlist_title {
+                font-size: 20px;
+                margin-bottom: 0px;
+                font-weight: 600;
+                margin-left: 20px;
+            }
+        }
+
+        .right_search_ellipsis {
+            display: flex;
+            i{
+                font-size: 25px;
+                //font-weight: bold;
+                margin-left: 15px;
+            }
+        }
     }
 }
 /*** RHS MOBILE TOP HEADER ***/
