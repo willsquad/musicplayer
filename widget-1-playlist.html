@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            MusicPlayer Widget
+        </title>
+        <link rel="stylesheet" href="files/css/bootstrap.css">
+        <link rel="stylesheet" href="files/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    </head>
+<body>
+    <!-- START OF MAIN CONTAINER FLUID -->
+    <div class="container-fluid">
+        <!-- START OF MAIN ROW -->
+        <div class="row music_widget_container">
+            <div class="music_widget_1_playlist">
+                <div class="widget_album_art_top">
+                    <img src="files/images/audience.jpg" alt="">
+                    <div class="album_art_overlay">
+                        <div class="overlay_top">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <div class="overlay_bottom">
+                            <div class="song_time_div">
+                                <h6 id="song_time">1:03 / 4:56</h6>
+                            </div>
+                            <div class="song_artist_div">
+                                <h3 id="song_name">Song Name</h3>
+                                <h4 id="artist_name">Artist Name</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget_controls_bottom">
+                    <!-- Music Progress bar  -->
+                    <div class="progress_bar">
+                        <div class="live_progress"></div>
+                    </div>
+                    <!-- Music Progress bar  -->
+
+                    <!-- Music Player Controls -->
+                    <div class="player_controls">
+                        <div class="playlist_button" title="Playlist">
+                            <i class="material-icons">library_music</i>
+                        </div>
+                        <div class="play_next_previous_container">
+                            <div class="previous_button">
+                                <i class="fa fa-backward"></i>
+                            </div>
+                            <div class="play_button">
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div class="next_button">
+                                <i class="fa fa-forward"></i>
+                            </div>
+                        </div>
+                       
+                        <div class="volume_button">
+                            <i class="material-icons">volume_up</i>
+                        </div>
+                    </div>
+                    <!-- Music Player Controls -->
+
+                    <div class="playlist_tracks_container">
+                            <!-- Start of Track Div  -->
+                            <div class="track_div">
+                                <div class="lhs">
+                                    <div class="album_art_round">
+                                        <img src="files/images/album_art.jpg" alt="">
+    
+                                        <div class="play_icon"><i class="fa fa-play"></i> </div>
+                                    </div>
+    
+                                    <div class="song_artist_name">
+                                        <h3 class="song_name">Song Name</h3>
+                                        <h3 class="artist_name">Artist Name</h3>
+                                    </div>
+                                </div>
+                                <div class="rhs">
+                                    <img src="files/images/equalizer_optimized.png" alt="">
+                                </div>
+                            </div>
+                            <!-- Start of Track Div  -->
+    
+                            <!-- Start of Track Div  -->
+                            <div class="track_div">
+                                <div class="lhs">
+                                    <div class="album_art_round">
+                                        <img src="files/images/album_art.jpg" alt="">
+    
+                                        <div class="play_icon"><i class="fa fa-play"></i> </div>
+                                    </div>
+    
+                                    <div class="song_artist_name">
+                                        <h3 class="song_name">Song Name 2</h3>
+                                        <h3 class="artist_name">Artist Name</h3>
+                                    </div>
+                                </div>
+                                <div class="rhs">
+                                    
+                                </div>
+                            </div>
+                            <!-- Start of Track Div  -->
+    
+                            <!-- Start of Track Div  -->
+                            <div class="track_div">
+                                <div class="lhs">
+                                    <div class="album_art_round">
+                                        <img src="files/images/album_art.jpg" alt="">
+    
+                                        <div class="play_icon"><i class="fa fa-play"></i> </div>
+                                    </div>
+    
+                                    <div class="song_artist_name">
+                                        <h3 class="song_name">Song Name 3</h3>
+                                        <h3 class="artist_name">Artist Name</h3>
+                                    </div>
+                                </div>
+                                <div class="rhs">
+                                    
+                                </div>
+                            </div>
+                            <!-- Start of Track Div  -->
+                        </div>
+                        <!-- Playlist Tracks Container -->
+                </div>
+            </div>
+        </div>
+        <!-- END OF MAIN ROW -->
+    </div>
+    <!-- END OF MAIN CONTAINER FLUID -->
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="files/js/widget.js"></script>
+
+</html>
