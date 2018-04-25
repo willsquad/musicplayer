@@ -657,6 +657,182 @@ button {
     }
 }
 /*** RHS BOTTOM ***/
-
-
 /**** Music Player RHS  ****/
+
+
+/**** Music Widget  ****/
+.music_widget_container {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+.music_widget {
+    width: 100%;
+    max-width: 375px;
+    height: 485px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
+
+    .widget_album_art_top {
+        background-color: #333;
+        display: flex;
+        flex-grow: 1;
+        position: relative;
+
+        img {
+            object-fit: cover;
+        }
+
+        .album_art_overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.2);
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .overlay_top {
+                height: 75px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 20px;
+                box-sizing: border-box;
+
+                i {
+                    font-size: 30px;
+                    color: #999;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #ee3939;
+                    }
+                }
+            }
+
+            .overlay_bottom {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: #fff;
+                flex-direction: column;
+                text-shadow: 1px 1px 1px #000;
+
+                .song_time_div {
+                    #song_time {
+                        font-size: 12px;
+                    }
+                }
+
+                .song_artist_div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    font-family: montserrat;
+
+                    #song_name {
+                        font-weight: 600;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+
+                    #artist_name {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .widget_controls_bottom {
+        min-height: 110px;
+        background-color: #fff;
+        position: relative;
+
+        /* Start of progress bar */
+        .progress_bar {
+            height: 5px;
+            background-color: #EBEBEB;
+            //background-color: #EE5044;
+            width: 100%;
+            position: absolute;
+        
+            .live_progress {
+                width: 200px;
+                height: 5px;
+                background-color: #EE5044;
+            }
+        }
+        /* Start of progress bar */
+
+        /* Start of player controls */
+        .player_controls {
+            height: calc(#{$rhs_bottom_height} - 5px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include media-breakpoint-down(md) {
+                height: calc(#{$rhs_bottom_height_md} - 5px);
+            }
+
+            .play_next_previous_container {
+                display: flex;
+                align-items: center;
+                margin: 0px;
+
+                &>div {
+                    color: #EE5044;
+                    font-size: 28px;
+                    margin: 0px 15px;
+                    i {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .play_button {
+                background-color: #EE5044;
+                width: 60px;
+                height: 60px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                i {
+                    font-size: 35px;
+                    color: #fff;
+                }
+            }
+
+            &>div {
+                color: #EE5044;
+                font-size: 25px;
+                margin: 0px 20px;
+                display: flex;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 25px;
+                }
+
+                i {
+                    cursor: pointer;
+                }
+
+               
+            }
+        }
+        /* End of player controls */
+    }
+}
+/**** Music Widget  ****/

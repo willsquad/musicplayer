@@ -10,8 +10,7 @@
         </title>
         <link rel="stylesheet" href="files/css/bootstrap.css">
         <link rel="stylesheet" href="files/css/style.css">
-        <link rel="stylesheet" href="files/css/nice-select.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
@@ -20,8 +19,56 @@
     <!-- START OF MAIN CONTAINER FLUID -->
     <div class="container-fluid">
         <!-- START OF MAIN ROW -->
-        <div class="row">
+        <div class="row music_widget_container">
+            <div class="music_widget">
+                <div class="widget_album_art_top">
+                    <img src="files/images/audience.jpg" alt="">
+                    <div class="album_art_overlay">
+                        <div class="overlay_top">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <div class="overlay_bottom">
+                            <div class="song_time_div">
+                                <h6 id="song_time">1:03 / 4:56</h6>
+                            </div>
+                            <div class="song_artist_div">
+                                <h3 id="song_name">Song Name</h3>
+                                <h4 id="artist_name">Artist Name</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget_controls_bottom">
+                    <!-- Music Progress bar  -->
+                    <div class="progress_bar">
+                        <div class="live_progress"></div>
+                    </div>
+                    <!-- Music Progress bar  -->
 
+                    <!-- Music Player Controls -->
+                    <div class="player_controls">
+                        <div class="loop_button">
+                            <i class="material-icons">replay</i>
+                        </div>
+                        <div class="play_next_previous_container">
+                            <div class="previous_button">
+                                <i class="fa fa-backward"></i>
+                            </div>
+                            <div class="play_button">
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div class="next_button">
+                                <i class="fa fa-forward"></i>
+                            </div>
+                        </div>
+                       
+                        <div class="volume_button">
+                            <i class="material-icons">volume_up</i>
+                        </div>
+                    </div>
+                    <!-- Music Player Controls -->
+                </div>
+            </div>
         </div>
         <!-- END OF MAIN ROW -->
     </div>
@@ -29,7 +76,6 @@
 </body>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="files/js/nice-select.min.js"></script>
 <script src="files/js/main.js"></script>
 
 </html>
