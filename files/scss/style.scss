@@ -1119,7 +1119,7 @@ button {
             &>div {
                 color: #EE5044;
                 font-size: 25px;
-                margin: 0px 20px;
+                //margin: 0px 20px;
                 display: flex;
 
                 @include media-breakpoint-down(md) {
@@ -1771,7 +1771,7 @@ button {
             &>div {
                 color: #EE5044;
                 font-size: 25px;
-                margin: 0px 20px;
+                //margin: 0px 20px;
                 display: flex;
 
                 @include media-breakpoint-down(md) {
